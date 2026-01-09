@@ -1,25 +1,35 @@
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Icon } from '@iconify/react'
+import { Star, StarIcon } from 'lucide-react'
+import Image from 'next/image'
 
-const AnimeCard = ({ item }: { item: any }) => {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{item.title}</CardTitle>
-        
-      </CardHeader>
-      <CardContent>
-        <CardDescription>{item.synopsis}</CardDescription>
-      </CardContent>
-    </Card>
-  );
-};
+const AnimeCard = ({
+   title,
+   image_url,
+   score,
+}: {
+   title: string
+   image_url: string
+   score: number
+}) => {
+   return (
+      <div className=" gap-3 relative h-[350px] rounded-2xl overflow-hidden">
+         <Image
+            src={image_url}
+            alt={title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px)  50vw, 33vw"
+            loading="eager"
+         />
+         <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent " />
+         <div className="absolute bottom-0 left-0 right-0 p-2 text-white">
+            <p className="text-sm flex items-center gap-1">
+               <Icon icon="tabler:star-filled" className="inline text-yellow-300" /> {score}
+            </p>
+            <p className="font-bold">{title}</p>
+         </div>
+      </div>
+   )
+}
 
-export default AnimeCard;
+export default AnimeCard

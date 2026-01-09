@@ -48,20 +48,20 @@
 
 :root {
    --radius: 0.625rem;
-   --background: oklch(1 0 0);
-   --foreground: oklch(0.145 0 0);
+   --background: #1f2128;
+   --foreground: #ffffff;
    --card: oklch(1 0 0);
-   --card-foreground: oklch(0.145 0 0);
+   --card-foreground: #ffffff;
    --popover: oklch(1 0 0);
-   --popover-foreground: oklch(0.145 0 0);
-   --primary: oklch(0.205 0 0);
+   --popover-foreground: #ffffff;
+   --primary: #23a3ff;
    --primary-foreground: oklch(0.985 0 0);
    --secondary: oklch(0.97 0 0);
-   --secondary-foreground: oklch(0.205 0 0);
+   --secondary-foreground: #23a3ff;
    --muted: oklch(0.97 0 0);
    --muted-foreground: oklch(0.556 0 0);
    --accent: oklch(0.97 0 0);
-   --accent-foreground: oklch(0.205 0 0);
+   --accent-foreground: #23a3ff;
    --destructive: oklch(0.577 0.245 27.325);
    --border: oklch(0.922 0 0);
    --input: oklch(0.922 0 0);
