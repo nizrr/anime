@@ -21,3 +21,13 @@ export const getSeasonNowAnime = async () => {
    const response = await fetchApi('seasons/now')
    return response
 }
+
+export const getAnimeById = async (id: any) => {
+   const response = await fetchApi(`anime/${id}`)
+   return response
+}
+
+export const getVideosById = async (id: any) => {
+   const response = await fetchApi(`anime/${id}/videos`)
+   return response
+}

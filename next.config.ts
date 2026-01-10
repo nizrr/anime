@@ -10,6 +10,13 @@ const nextConfig: NextConfig = {
             pathname: '/**',
             search: '',
          },
+         {
+            protocol: 'https',
+            hostname: 'img1.ak.crunchyroll.com',
+            port: '',
+            pathname: '/**',
+            search: '',
+         },
       ],
    },
    /* config options here */
