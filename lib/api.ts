@@ -1,8 +1,8 @@
 const BASE_URL = process.env.PUBLIC_API_BASE_URL
 
-const fetchApi = async (url: string) => {
+const fetchApi = async (url: string, query?: string) => {
    try {
-      const response = await fetch(`${BASE_URL}/${url}`, {
+      const response = await fetch(`${BASE_URL}/${url}${query ? `?${query}` : ''}`, {
          next: { revalidate: 3600 },
       })
       const data = await response.json()
@@ -19,6 +19,11 @@ export const getTopAnime = async () => {
 
 export const getSeasonNowAnime = async () => {
    const response = await fetchApi('seasons/now')
+   return response
+}
+
+export const getUpcomingAnime = async (query?: string) => {
+   const response = await fetchApi('seasons/upcoming', query)
    return response
 }
 
