@@ -2,6 +2,7 @@ import SeasonNowAnime from "@/app/(root)/SeasonNowAnime";
 import TopAnime from "@/app/(root)/TopAnime";
 import { getSeasonNowAnime, getTopAnime, getUpcomingAnime } from "@/lib/api";
 import { UpcomingAnime } from "./UpcomingAnime";
+import AnimeGallery from "@/components/AnimeGallery";
 
 export default async function Home() {
     const topAnime = await getTopAnime();
@@ -11,7 +12,8 @@ export default async function Home() {
         <>
             <UpcomingAnime anime={upcomingAnime} />
             <TopAnime anime={topAnime} />
-            <SeasonNowAnime anime={seasonNowAnime} />
+            {/* <SeasonNowAnime anime={seasonNowAnime} /> */}
+            <AnimeGallery animeList={seasonNowAnime.data} />
         </>
     );
 }
