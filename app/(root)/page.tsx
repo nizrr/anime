@@ -10,12 +10,8 @@ export default async function Home() {
     return (
         <>
             <UpcomingAnime anime={upcomingAnime} />
-            <div className="container mx-auto">
-                <div className="grid grid-cols-1 gap-4">
-                    <TopAnime anime={topAnime} />
-                    <SeasonNowAnime anime={seasonNowAnime} />
-                </div>
-            </div>
+            <TopAnime anime={topAnime} />
+            <SeasonNowAnime anime={seasonNowAnime} />
         </>
     );
 }

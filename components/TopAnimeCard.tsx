@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react'
 import { Star, StarIcon } from 'lucide-react'
 import Image from 'next/image'
 
-const AnimeCard = ({
+const TopAnimeCard = ({
    id,
    title,
    image_url,
@@ -34,14 +34,9 @@ const AnimeCard = ({
             loading="eager"
          />
          <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent " />
-         <div className="absolute bottom-0 left-0 right-0 p-2 text-white">
-            <p className="text-sm flex items-center gap-1">
-               <Icon icon="tabler:star-filled" className="inline text-yellow-300" /> {score}
-            </p>
-            <p className="font-bold">{title}</p>
-         </div>
+         <div className="absolute bottom-0 left-0 right-0 p-2 text-white"></div>
       </div>
    )
 }
 
-export default AnimeCard
+export default TopAnimeCard
