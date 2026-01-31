@@ -39,7 +39,7 @@ const AnimeCard = ({
                <Icon icon="tabler:star-filled" className="inline text-yellow-300" /> {score}
             </p>
             <p className="font-bold">{title}</p>
-         </div>
+         </div>   
       </div>
    )
 }
