@@ -57,33 +57,35 @@ export const UpcomingAnime = ({ anime }: { anime: any }) => {
                   return (
                      <CarouselItem key={index} className="pl-4 border-0 font-clash">
                         <div className="bg-accent h-dvh overflow-hidden relative w-full">
-                           {anime.trailer?.embed_url
-                              ? //   <iframe
-                                //      src={`${anime.trailer.embed_url}&autoplay=1&mute=1&loop=1&playlist=${videoId}`}
-                                //      title={anime.title}
-                                //      className="absolute w-[2000px] h-[1200px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover brightness-100 pointer-events-none"
-                                //      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;web-share;"
-                                //   />
-                                anime.images?.jpg?.image_url && (
-                                   <img
-                                      src={
-                                         anime.images.jpg.large_image_url ||
-                                         anime.images.jpg.image_url
-                                      }
-                                      alt={anime.title}
-                                      className="w-full h-full object-cover brightness-50"
-                                   />
-                                )
-                              : anime.images?.jpg?.image_url && (
-                                   <img
-                                      src={
-                                         anime.images.jpg.large_image_url ||
-                                         anime.images.jpg.image_url
-                                      }
-                                      alt={anime.title}
-                                      className="w-full h-full object-cover brightness-50"
-                                   />
-                                )}
+                           {anime.trailer?.embed_url ?  (
+                              <iframe
+                                 src={`${anime.trailer.embed_url}&autoplay=1&mute=1&loop=1&playlist=${videoId}`}
+                                 title={anime.title}
+                                 className="absolute w-[2000px] h-[1200px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover brightness-100 pointer-events-none"
+                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;web-share;"
+                              />
+                           ) : (
+                              //   anime.images?.jpg?.image_url && (
+                              //      <img
+                              //         src={
+                              //            anime.images.jpg.large_image_url ||
+                              //            anime.images.jpg.image_url
+                              //         }
+                              //         alt={anime.title}
+                              //         className="w-full h-full object-cover brightness-50"
+                              //      />
+                              //   )
+                              anime.images?.jpg?.image_url && (
+                                 <img
+                                    src={
+                                       anime.images.jpg.large_image_url ||
+                                       anime.images.jpg.image_url
+                                    }
+                                    alt={anime.title}
+                                    className="w-full h-full object-cover brightness-50"
+                                 />
+                              )
+                           )}
                            <div className="absolute inset-0 bg-linear-to-br from-primary/50 via-primary/20 to-transparent z-0" />
                            <div className="absolute inset-0 bg-linear-to-b from-black/50 via-transparent to-transparent z-0" />
                            <div className="absolute left-30 top-1/2 -translate-y-1/2 z-10 space-y-1">

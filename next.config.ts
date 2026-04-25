@@ -12,6 +12,13 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
+                hostname: "myanimelist.net",
+                port: "",
+                pathname: "/**",
+                search: "",
+            },
+            {
+                protocol: "https",
                 hostname: "img1.ak.crunchyroll.com",
                 port: "",
                 pathname: "/**",
