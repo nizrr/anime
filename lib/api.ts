@@ -1,6 +1,6 @@
 const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.jikan.moe/v4'
 
-export async function fetchApi<T>(url: string, query?: string): Promise<T> {
+export async function fetchApi<T = any>(url: string, query?: string): Promise<T> {
    const res = await fetch(`${BASE_URL}/${url}${query ? `?${query}` : ''}`, {
       next: { revalidate: 3600 },
    })
